@@ -1,7 +1,11 @@
 {
   "name": "trending-photos-generator",
-  "module": "index.ts",
+  "module": "main.ts",
   "type": "module",
+  "scripts": {
+    "dev": "set NODE_ENV=development && bun src/main.ts",
+    "build": "bun build.production.ts"
+  },
   "devDependencies": {
     "bun-types": "latest"
   },
@@ -9,6 +13,8 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "fastify": "^4.23.2",
+    "reflect-metadata": "^0.1.13",
     "tsyringe": "^4.8.0"
   }
 }
